@@ -12,15 +12,6 @@ public class SuperpoweredFFT extends CordovaPlugin {
 	@Override
 	public boolean execute(String action, JSONArray args, final CallbackContext callbackContext) throws JSONException {
 		if (action.equals("getComplex")) { 
-			JSONObject arg_object = args.getJSONObject(0);
-			int real = arg_object.getInt("real");
-			int imag = arg_object.getInt("imag");
-			int logSize = arg_object.getInt("logSize");
-			boolean forward = arg_object.getBoolean("forward");
-			
-			String jniString = SuperpoweredJni.stringFromJNI();
-			//SuperpoweredExample.onPlayPause(false);
-			
 			JSONObject json = new JSONObject();
 			json.put("real", real + jniString);
 			
