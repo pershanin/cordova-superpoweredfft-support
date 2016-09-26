@@ -12,6 +12,7 @@ var superpoweredfft =  {
                 "forward": forward		// forward Forward or inverse.
             }]
         );
+		console.log('cordova exec');
     }
 }
 module.exports = superpoweredfft;
