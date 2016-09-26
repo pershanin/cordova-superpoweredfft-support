@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+		   id="org.pearson.superpoweredfft"
+	  version="0.1.0" >
+	<name>SuperpoweredFFT</name>
+	<description>Cordova plugin to add Superpowered FFT support</description>
+	<keywords>cordova,phonegap,superpowered,fft,plugin</keywords>
+	
+	<js-module src="www/superpoweredfft.js" name="SuperpoweredFFT">
+        <clobbers target="window.superpoweredfft" />
+    </js-module>
+	
+	 <!-- android -->
+    <platform name="android">
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="SuperpoweredFFT">
+                <param name="android-package" value="org.pearson.superpoweredfft.SuperpoweredFFT"/>
+            </feature>
+        </config-file>
+		
+		<source-file src="src/android/org/pearson/superpoweredfft/SuperpoweredFFTjni.java" target-dir="src/org/pearson/superpoweredfft/" />
+        <source-file src="src/android/org/pearson/superpoweredfft/SuperpoweredFFT.java" target-dir="src/org/pearson/superpoweredfft/" />
+    </platform>    
+</plugin>
