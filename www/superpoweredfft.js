@@ -14,4 +14,4 @@ var superpoweredfft =  {
         );
     }
 }
-module.exports = superpoweredFFT;
+module.exports = superpoweredfft;
