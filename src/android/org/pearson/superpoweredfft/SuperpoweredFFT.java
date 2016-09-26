@@ -19,7 +19,7 @@ public class SuperpoweredFFT extends CordovaPlugin {
 			boolean forward = arg_object.getBoolean("forward");
 			
 			String jniString = SuperpoweredJni.stringFromJNI();
-			SuperpoweredExample.onPlayPause(false);
+			//SuperpoweredExample.onPlayPause(false);
 			
 			JSONObject json = new JSONObject();
 			json.put("real", real + jniString);
