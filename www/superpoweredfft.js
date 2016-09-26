@@ -1,9 +1,9 @@
-var superpoweredFFT =  {
+var superpoweredfft =  {
     getComplex: function(real, imag, logSize, forward, successCallback, errorCallback) {
         cordova.exec(
             successCallback, 			// success callback function
             errorCallback, 				// error callback function
-            'superpoweredFFT', 			// mapped to our native Java class
+            'SuperpoweredFFT', 			// mapped to our native Java class
             'getComplex', 				// with this action name
             [{                  		
                 "real": real,			// real Real part.
