@@ -1,6 +1,7 @@
 package org.pearson.superpoweredfft;
 
 import org.apache.cordova.*;
+import org.json.JSONObject;
 import org.json.JSONArray;
 import org.json.JSONException;
 import android.app.Activity;
