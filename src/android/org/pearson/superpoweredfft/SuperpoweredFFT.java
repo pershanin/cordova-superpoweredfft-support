@@ -1,13 +1,10 @@
 package org.pearson.superpoweredfft;
- 
-import org.apache.cordova.CallbackContext;
-import org.apache.cordova.CordovaPlugin;
-import org.json.JSONObject;
+
+import org.apache.cordova.*;
 import org.json.JSONArray;
 import org.json.JSONException;
-
 import android.app.Activity;
-import android.content.Intent;
+import android.os.Bundle;
 
 public class SuperpoweredFFT extends CordovaPlugin {
 
@@ -15,12 +12,13 @@ public class SuperpoweredFFT extends CordovaPlugin {
 	public boolean execute(String action, JSONArray args, final CallbackContext callbackContext) throws JSONException {
 		if (action.equals("getComplex")) { 
 			JSONObject arg_object = args.getJSONObject(0);
-			double real = arg_object.getDouble("real");
-			double imag = arg_object.getDouble("imag");
+			int real = arg_object.getDouble("real");
+			int imag = arg_object.getDouble("imag");
 			int logSize = arg_object.getInt("logSize");
 			boolean forward = arg_object.getBoolean("forward");
 			
 			String jniString = SuperpoweredJni.stringFromJNI();
+			SuperpoweredExample.onPlayPause(false);
 			
 			JSONObject json = new JSONObject();
 			json.put("real", real + jniString);
