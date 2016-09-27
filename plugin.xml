@@ -19,7 +19,6 @@
             </feature>
         </config-file>
 		
-		<source-file src="src/android/org/pearson/superpoweredfft/SuperpoweredJni.java" target-dir="src/org/pearson/superpoweredfft/" />
         <source-file src="src/android/org/pearson/superpoweredfft/SuperpoweredFFT.java" target-dir="src/org/pearson/superpoweredfft/" />
     </platform>    
 </plugin>
