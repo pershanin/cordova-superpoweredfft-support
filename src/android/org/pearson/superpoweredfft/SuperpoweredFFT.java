@@ -6,6 +6,8 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import android.app.Activity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 
 public class SuperpoweredFFT extends CordovaPlugin {
 
@@ -18,11 +20,10 @@ public class SuperpoweredFFT extends CordovaPlugin {
 			int logSize = arg_object.getInt("logSize");
 			boolean forward = arg_object.getBoolean("forward");
 			
-			String jniString = SuperpoweredJni.stringFromJNI();
 			SuperpoweredExample.onPlayPause(false);
 			
 			JSONObject json = new JSONObject();
-			json.put("real", real + jniString);
+			json.put("real", real);
 			
 			callbackContext.success(json);
 			return true;
