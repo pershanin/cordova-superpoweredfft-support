@@ -20,8 +20,6 @@ public class SuperpoweredFFT extends CordovaPlugin {
 			int logSize = arg_object.getInt("logSize");
 			boolean forward = arg_object.getBoolean("forward");
 			
-			SuperpoweredExample.onPlayPause(false);
-			
 			JSONObject json = new JSONObject();
 			json.put("real", real);
 			
@@ -34,10 +32,7 @@ public class SuperpoweredFFT extends CordovaPlugin {
 	}
 	
 	public void SuperpoweredExample_PlayPause(View button) {  // Play/pause.
-    	playing = !playing;
-    	onPlayPause(playing);
-    	Button b = (Button) findViewById(R.id.playPause);
-    	b.setText(playing ? "Pause" : "Play");
+    	
     }
 	
 	private native void SuperpoweredExample(String apkPath, long[] offsetAndLength);
