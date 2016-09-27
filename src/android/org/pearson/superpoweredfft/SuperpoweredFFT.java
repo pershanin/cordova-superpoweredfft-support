@@ -32,4 +32,18 @@ public class SuperpoweredFFT extends CordovaPlugin {
 		}
 	}
 	
+	public void SuperpoweredExample_PlayPause(View button) {  // Play/pause.
+    	playing = !playing;
+    	onPlayPause(playing);
+    	Button b = (Button) findViewById(R.id.playPause);
+    	b.setText(playing ? "Pause" : "Play");
+    }
+	
+	private native void SuperpoweredExample(String apkPath, long[] offsetAndLength);
+	private native void onPlayPause(boolean play);
+    
+    static {
+        System.loadLibrary("SuperpoweredExample");
+    }
+	
 }
